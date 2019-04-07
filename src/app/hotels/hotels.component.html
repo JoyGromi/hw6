@@ -1,0 +1,29 @@
+<div class="container" fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="center">
+  <p *ngIf='isLoading'>Loading...</p>
+  <div fxFlex="40%">
+    <mat-card class="hotels-card">
+      <img matCardImage [src]="currentHotel?.picture">
+      <mat-form-field class="shfield">
+        <input matInput placeholder="Search" (input)="search($event)">
+      </mat-form-field>
+      <mat-card-content>
+        Hotels
+        <app-list [hotels$]="hotels$" [currentHotel]="currentHotel" (hotel)="setHotel($event)"
+          (onHotelChange)='changeHotel($event)' [searchHotel]="searchHotel"></app-list>
+      </mat-card-content>
+    </mat-card>
+    <mat-paginator 
+      [length]="10" 
+      [pageSize]="2" 
+      [pageSizeOptions]="[1, 2, 4, 10]"
+      (page)="changeHotel($event)">
+    </mat-paginator>
+  </div>
+  <div fxFlex="20%">
+    <app-weather [weather]='currentHotel?.weather'></app-weather>
+    <app-profile [profile]='currentHotel?.profile'></app-profile>
+  </div>
+  <div fxFlex="30%">
+    <app-favorite></app-favorite>
+  </div>
+</div>

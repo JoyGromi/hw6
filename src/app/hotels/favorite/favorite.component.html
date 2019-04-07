@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-title>
+    Favorite hotel
+  </mat-card-title>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item role="listitem" *ngFor="let item of favorite">
+        <span [matBadge]="item?.amountInFavt" matBadgeOverlap="false">
+          {{ item?.title }}
+        </span>
+        <div fxFlex></div>
+        <button mat-icon-button (click)="removeFavorite(item.id)">
+          <mat-icon aria-label="Example icon-button with a heart icon">clear</mat-icon>
+        </button>
+      </mat-list-item>
+
+    </mat-list>
+  </mat-card-content>
+</mat-card>

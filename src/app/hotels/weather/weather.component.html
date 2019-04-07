@@ -1,0 +1,12 @@
+<mat-card class="weather-card">
+    <mat-card-title>
+      Weather
+    </mat-card-title>
+    <mat-card-content>
+      <h3>Fallouts: {{weather?.icon}}</h3> 
+      <span [ngClass]="weather?.icon"></span>
+      <h3 class="weather-icon">Wind: {{weather?.wind}} <sup class="degree">&#176;</sup></h3>
+      <h3 class="weather-icon">Temp: {{weather?.temperature}} <sup class="degree">&#176;</sup></h3>
+      
+    </mat-card-content>
+  </mat-card>

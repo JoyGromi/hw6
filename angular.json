@@ -23,7 +23,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/weather-icons.min.css"
             ],
             "scripts": [],
             "es5BrowserSupport": true

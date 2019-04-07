@@ -1,0 +1,22 @@
+<div class="list-wraper">
+  <mat-list>
+    <mat-list-item 
+      *ngFor="let hotel of hotels$ | async | filter: searchHotel;"
+      (click)="selectHotel(hotel)" 
+    >
+      <p matLine>{{hotel.stars}}</p><!-- TODO: Change number to star -->
+      <img *ngFor='let photo of hotel.photos' matListAvatar [src]="photo" alt="...">
+      <h3 matLine>Title: {{hotel.title}}</h3>
+      <p matLine>{{hotel.title}}</p>
+      <p matLine>{{hotel.address}}</p>
+      <h6 matLine>tel:{{hotel.phone}}</h6>
+      
+      <button 
+        mat-icon-button color="primary" 
+        aria-label="Example icon-button with a heart icon"
+        (click)="addFavorite(hotel); $event.stopPropagation()">
+          <mat-icon>favorite</mat-icon>
+        </button>
+    </mat-list-item>
+  </mat-list>
+</div>

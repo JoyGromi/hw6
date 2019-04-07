@@ -1,0 +1,19 @@
+<mat-card class="detail-card">
+    
+    <mat-card-title>Lorem ipsum</mat-card-title>
+    <img mat-card-image [src]='profile?.photo'>
+    <mat-card-footer fxLayout="row" fxLayoutAlign="space-around center">
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <strong>{{profile?.followers}}</strong>
+        <p>
+          followers
+        </p>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <strong>{{profile?.following}}</strong>
+        <p>
+          following
+        </p>
+      </div>
+    </mat-card-footer>
+  </mat-card>
