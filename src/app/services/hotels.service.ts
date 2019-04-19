@@ -31,6 +31,9 @@ export class HotelsService {
     );
     return this.http.get<IHotel[]>(`${environment.apiUrl}/hotels`, {params, headers});
   }
+  public getHotel(hotelId: string): Observable<IHotel>{
+    return this.http.get<IHotel>(`${environment.apiUrl}/hotels/${hotelId}`);
+  }
 
   public addHotel(hotel: IHotel): Observable<IHotel> {
     return this.http.post<IHotel>(`${environment.apiUrl}/hotels`, hotel);

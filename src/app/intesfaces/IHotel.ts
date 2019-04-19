@@ -23,6 +23,7 @@ export interface IProfile {
 }
 
 export interface IHotel extends IHotelBase {
+//   emit(hotel: IHotel);
     id: number;
 }
 export interface IFavorite extends IHotel {

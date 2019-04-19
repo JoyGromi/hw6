@@ -1,18 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { FilterPipe } from './pipes/filter.pipe';
+// import { FilterPipe } from './pipes/filter.pipe';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { NavComponent } from './nav/nav.component';
 // import { HotelListComponent } from './hotel-list/hotel-list.component';
-import { HotelsComponent } from './hotels/hotels.component';
-import { ListComponent } from './hotels/list/list.component';
-import { WeatherComponent } from './hotels/weather/weather.component';
-import { ProfileComponent } from './hotels/profile/profile.component';
-import { FavoriteComponent } from './hotels/favorite/favorite.component';
+// import { HotelsComponent } from './hotels/hotels.component';
+// import { ListComponent } from './hotels/list/list.component';
+// import { WeatherComponent } from './hotels/weather/weather.component';
+// import { ProfileComponent } from './hotels/profile/profile.component';
+// import { FavoriteComponent } from './hotels/favorite/favorite.component';
 
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
@@ -22,11 +22,14 @@ import { MatButtonModule, MatInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { UsersComponent } from './users/users.component';
+// import { UsersComponent } from './users/users.component';
 import { AboutComponent } from './about/about.component';
 import { ContactsComponent } from './contacts/contacts.component';
-
+import { RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { routes } from './config.routes';
+// import { DetailComponent } from './hotels/detail/detail.component';
+import { CommentsComponent } from './hotels/detail/comments/comments.component';
 
 
 @NgModule({
@@ -36,25 +39,28 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     HeaderComponent,
     NavComponent,
     // HotelListComponent,
-    HotelsComponent,
-    ListComponent,
-    WeatherComponent,
-    ProfileComponent,
-    FilterPipe,
-    FavoriteComponent,
-    UsersComponent,
+    // HotelsComponent,
+    // ListComponent,
+    // WeatherComponent,
+    // ProfileComponent,
+    // FilterPipe,
+    // FavoriteComponent,
+    // UsersComponent,
     AboutComponent,
-    ContactsComponent
+    ContactsComponent,
+    // DetailComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     // MaterialModule.forRoot,
     BrowserAnimationsModule,
-    MatToolbarModule, 
+    MatToolbarModule,
     MatListModule, MatCardModule, MatInputModule,
     MatButtonModule, MatIconModule, MatBadgeModule, MatPaginatorModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

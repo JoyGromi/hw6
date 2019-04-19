@@ -1,0 +1,25 @@
+<div fxLayout="row">
+  <div fxFlex="60%">
+     <div *ngIf="hotel$ | async as hotel">
+
+      <!-- 1. {{(hotel$ | async)?.title}} -->
+      <!-- 2. *ngIf="hotel$ | async as hotel",  hotel.title-->
+
+      <!-- <p matLine>{{hotel$.stars | async}}</p>  -->
+      <!-- TODO: Change number to star -->
+
+
+      <img *ngFor='let photo of (hotel$ | async)?.photos' matListAvatar [src]="photo" alt="...">
+      <h3 matLine>Title: {{hotel.title}}</h3>
+      
+      <p matLine>{{(hotel$ | async)?.title}}</p>
+      <p matLine>{{(hotel$ | async)?.address}}</p>
+      <h6 matLine>tel:{{(hotel$ | async)?.phone}}</h6>
+
+    </div>
+  </div>
+  <div fxFlex="20%">
+      <!-- <app-weather [weather]='currentHotel?.weather'></app-weather> -->
+      <!-- <app-profile [profile]='currentHotel?.profile'></app-profile> -->
+    </div>
+</div>

@@ -7,32 +7,17 @@
   <app-header></app-header>
 </nav> -->
 
-<div class="container" fxLayout="row" fxLayoutWrap fxLayoutGap="20px" fxLayoutAlign="center">
-
-  <div fxFlex="10%">
-    <app-nav></app-nav>
+<div class="container">
+  <div fxLayout="row" fxLayoutWrap fxLayoutGap="20px" fxLayoutAlign="center">
+    <div fxFlex="10%">
+        <app-nav></app-nav>
+      </div>
+      <div fxFlex="70%">
+        <router-outlet></router-outlet>
+      </div>
   </div>
-  <div fxFlex="70%">
-    <app-hotels></app-hotels>
-  </div>
-
 </div>
 
 <footer class="row">
   <app-footer></app-footer>
 </footer>
-
-<!-- <div class="container">
-  <div class="row">
-    <div class="col-sm-2">
-        app-nav
-    </div>
-    <div class="com-sm-10">
-        app-hotels
-    </div>
-  </div>
-  <div class="row">footer</div>
-  <footer class="row">
-    app-footer
-  </footer>
-</div> -->
